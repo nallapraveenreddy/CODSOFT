@@ -1,10 +1,13 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class NumberGuess {
+public class Main{
     public static void main(String[] args) {
         Random random = new Random();
         int ranNum = random.nextInt(100) + 1;
+  
+        int yes=1;
+        while(yes==1){
         int tries = 1;
         int limit=10;
         Scanner sc = new Scanner(System.in);
@@ -12,22 +15,25 @@ public class NumberGuess {
         int g = sc.nextInt();
         while (g != ranNum) {
             tries++;
-            limit--;
-            if(limit==0)
-            {
-                System.out.println("Your attempt limit has been reached!");
-                break;
-            }
             if (g< ranNum) {
                 System.out.println("Too low");
             } else {
                 System.out.println("Too High");
             }
-
+            if(tries>10)
+            {
+                System.out.println("Your attempt limit has been reached!");
+                break;
+            }
             System.out.println("Try another");
             g = sc.nextInt();
         }
+        if(tries<=10){
         System.out.println("Congratulations! You guessed the number in " + tries + " attempts.");
+        }
+        System.out.println("Do you want to play again?(0/1):");
+        yes=sc.nextInt();
+        }
+        System.out.println("Thank you!");
     }
-    
 }
