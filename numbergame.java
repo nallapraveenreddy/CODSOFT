@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Main{
+public class numbergame{
     public static void main(String[] args) {
         Random random = new Random();
         int ranNum = random.nextInt(100) + 1;
