@@ -4,10 +4,10 @@ import java.util.Random;
 public class numbergame{
     public static void main(String[] args) {
         Random random = new Random();
-        int ranNum = random.nextInt(100) + 1;
-  
         int yes=1;
+        int ranNum;
         while(yes==1){
+        ranNum = random.nextInt(100) + 1;
         int tries = 1;
         int limit=10;
         Scanner sc = new Scanner(System.in);
