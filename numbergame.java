@@ -7,11 +7,11 @@ public class numbergame{
         int yes=1;
         int ranNum;
         while(yes==1){
-        ranNum = random.nextInt(100) + 1;
+        ranNum = random.nextInt(10) + 1;
         int tries = 1;
         int limit=10;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a Number Between 0-100 to guess:");
+        System.out.println("Enter a Number Between 0-10 to guess:");
         int g = sc.nextInt();
         while (g != ranNum) {
             tries++;
